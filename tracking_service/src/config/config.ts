@@ -16,7 +16,7 @@ const MONGO = {
 };
 
 const SERVER_HOSTNAME = 'locahost'
-const SERVER_PORT = 3000
+const SERVER_PORT = 9000
 
 const SERVER = {
     hostname: SERVER_HOSTNAME,

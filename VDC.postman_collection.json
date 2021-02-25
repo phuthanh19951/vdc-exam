@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "c3a376e1-c9ec-40d6-b96a-adc3328270c2",
+		"name": "VDC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get product detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/products/130",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"130"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all and filter products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/products?sort=quantity:desc&sort=price:asc&take=50&name=Awe",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "quantity:desc"
+						},
+						{
+							"key": "sort",
+							"value": "price:asc"
+						},
+						{
+							"key": "take",
+							"value": "50"
+						},
+						{
+							"key": "name",
+							"value": "Awe"
+						},
+						{
+							"key": "category",
+							"value": "Tuna",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tracking User Action",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"view\",\n    \"keyword\": { \"id\": 1 },\n    \"product\": \"Product name\" \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/track",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"track"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get tracking history",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/tracks",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"tracks"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

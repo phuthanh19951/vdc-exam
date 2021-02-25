@@ -1,3 +1,4 @@
+.vscode
 main_service/node_modules
 main_service/dist
 tracking_service/node_modules

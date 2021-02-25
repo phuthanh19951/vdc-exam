@@ -29,7 +29,7 @@ app.get('/health', (req, res) => res.json({
     "version": "1.0.1",
 }))
 
-app.use('/track', trackingRoutes);
+app.use('/tracks', trackingRoutes);
 
 app.listen(port, () => console.log('SERVER', `Server is running ${config.server.hostname}:${config.server.port}`))
 process.on('SIGINT', () => {

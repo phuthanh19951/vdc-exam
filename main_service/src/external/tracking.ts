@@ -10,7 +10,7 @@ export class TrackingAPI {
       headers: { 'Content-Type': 'application/json' },
     };
 
-    fetch(`${config.trackingServiceUrl}/track`, options).
+    fetch(`${config.trackingServiceUrl}/tracks`, options).
       catch(err => {
         // Will use logging here to track error instead of console.log
         console.log(err);
